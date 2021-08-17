@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Node.js CI/CD
 on:
   push:
     branches: [ main ]
@@ -26,4 +26,4 @@ jobs:
 
       - name: Copy files to the test website with the AWS CLI
         run: |
-          aws s3 sync build/ s3://20210817-izuhiro-react-handson
+          aws s3 sync build/ s3://20210817-izuhiro-react-handson --delete
